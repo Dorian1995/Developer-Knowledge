@@ -1,0 +1,93 @@
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgoldenrod;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: darkseagreen;
+    border-radius: 1em;
+    box-shadow: 0em 0em 0.5em 0.5em greenyellow;
+    width: 25em;
+}
+
+h2 {
+    text-align: center;
+    margin: 1em;
+}
+
+.form {
+    padding: 1em;
+}
+
+.form-control {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+.form-control label {
+    color: darkcyan;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.form-control input {
+    border: 0.2em solid;
+    border-radius: 0.5em;
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: grey;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: darkslateblue;
+    border: 0 solid darkslateblue;
+    border-radius: 0.5em;
+    color: white;
+    display: block;
+    font-size: 1em;
+    padding: 1em;
+    margin-top: 1em;
+    width: 100%;
+}
