@@ -1,10 +1,11 @@
 {
   "dependencies": {
+    "all": "^0.0.0",
     "angular": "^1.6.10",
     "awesome": "^0.0.7",
     "bootstrap": "^5.1.3",
     "css": "^3.0.0",
-    "eslint": "^8.18.0",
+    "eslint": "^8.19.0",
     "express": "^4.18.1",
     "font": "^0.0.4",
     "font-awesome": "^4.7.0",
@@ -13,9 +14,15 @@
     "javascript": "^1.0.0",
     "jquery": "^3.6.0",
     "json": "^11.0.0",
+    "laravel": "^0.0.1",
+    "less": "^4.1.3",
     "nodejs": "^0.0.0",
-    "nodemon": "^1.3.3",
+    "nodemon": "^2.0.19",
+    "php": "^1.0.2",
+    "python": "^0.0.4",
     "react": "^18.2.0",
+    "sass": "^1.53.0",
+    "tailwind": "^4.0.0",
     "typescript": "^4.7.4",
     "vue": "^3.2.37"
   }

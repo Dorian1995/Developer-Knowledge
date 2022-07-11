@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkslateblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    margin: 5em;
+    width: 20em;
+}
+
+h1 {
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 1px solid red;
+    padding-bottom: 0.5em;
+    margin: 0em;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    background-color: darkgrey;
+    box-shadow: var(--box-shadow);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0em;
+}
+
+.inc-exp-container>div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container>div:first-of-type {
+    border-right: 1px solid red;
+}
+
+.money {
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    margin: 1em 0em;
+}
+
+.money.plus {
+    color: green
+}
+
+.money.minus {
+    color: red;
+}
+
+label {
+    display: inline-block;
+    margin: 1em 0em;
+}
+
+input[type='text'],
+input[type='number'] {
+    border: 1px solid white;
+    border-radius: 0.5em;
+    display: block;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: darkseagreen;
+    box-shadow: var(--box-shadow);
+    color: black;
+    border: 0;
+    display: block;
+    font-size: 1em;
+    margin: 1em 0em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+.btn:focus,
+.delete-btn:focus {
+    outline: 0;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.list li {
+    background-color: blanchedalmond;
+    box-shadow: var(--box-shadow);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.5em;
+    margin: 1em 0em;
+}
+
+.list li.plus {
+    border-right: 5px solid green;
+}
+
+.list li.minus {
+    border-right: 5px solid red;
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: tomato;
+    border: 0;
+    color: whitesmoke;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
