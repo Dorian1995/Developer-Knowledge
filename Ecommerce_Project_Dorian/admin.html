@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="E-commerce Project">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Dorian Banica">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/jozef89/services-flat/128/ecommerce-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Laptop Shop</title>
+</head>
+
+<body>
+    <h1>Laptop Store</h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="#">
+                    <img src="./icons/logo.jpeg" alt="logo" style="width: 3em;">
+                </a>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Index
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin
+                            <i class="fa-brands fa-product-hunt"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart
+                            <i class="fas fa-shopping-cart menu-icon"></i>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Details
+                            <i class="fa-solid fa-asterisk"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light btn-floating m-1 social-media" href="https://www.facebook.com/"
+                            role="button"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://twitter.com/?lang=en" role="button"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://www.google.com/" role="button"><i class="fab fa-google"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://www.instagram.com/" role="button"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://www.youtube.com/" role="button"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://ro.linkedin.com" role="button"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://ro.pinterest.com/" role="button"><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-floating m-1 social-media"
+                            href="https://www.tiktok.com/?lang=ro-RO" role="button"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </li>
+                </ul>
+                <input class="form-control" type="text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <div class="toggle-container">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-products">
+        <div class="add-product">
+            <form class="product-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="image" placeholder="Product image" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Product name" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="price" placeholder="Product price" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="description" placeholder="Product description" />
+                </div>
+                <div class="form-group">
+                    <input type="hidden" id="productId" name="productId" />
+                </div>
+                <div>
+                    <button class="update-product">Update</button>
+                    <button class="add-new-product">Add New Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="admin-all-products">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th class="thead-description" scope="col">Description</th>
+                </tr>
+            </thead>
+
+
+            <tbody class="admin-products-table">
+                <!-- <tr class="table-products">
+                    <th scope="row">1</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/ASUS.jpeg" alt="Product Image"></td>
+                    <td>Asus ExpertBook</td>
+                    <td>1000$</td>
+                    <td>Extended productivity for the commercial sector. Offering you a high level of
+                        productivity throughout the working day,
+                        the ASUS ExpertBook P2 is a complete package dedicated to the commercial sector. This very
+                        light
+                        laptop
+                        combines
+                        robustness to military standards with a high level of corporate security, and also has the
+                        new
+                        SensePoint indicator
+                        button.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="1"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="1"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">2</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/ASUS 2.jpeg" alt="Product Image">
+                    </td>
+                    <td>Asus ZenBook</td>
+                    <td>1500$</td>
+                    <td>The ZenBook 14 is designed for effortless, moving productivity with a portable,
+                        slim and ultra-lightweight design and
+                        outstanding battery life, allowing you to focus fully on tasks. The ZenBook 14 features a
+                        bright and
+                        clear four-sided
+                        NanoEdge display with thin edges that create a 92% screen-to-case ratio for a more immersive
+                        viewing
+                        experience. This
+                        bright and clear display has a wide range of 100% sRGB colors to ensure vivid colors.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="2"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="2"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products"> -->
+                <!-- <th scope="row">3</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/DELL.jpg" alt="Product Image"></td>
+                    <td>Dell Vostro 5515</td>
+                    <td>2000$</td>
+                    <td>Dell Vostro 5515 has a screen size of 15.6 inches, full HD, AMD Ryzen 3 5300U
+                        processor, 8GB RAM, 256GB storage space,
+                        SSD and Windows 10 Pro operating system. It is light, has a resolution of 1920x1080, has a
+                        touchpad,
+                        splash-resistant
+                        keyboard, has a webcam and card reader.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="3"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="3"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">4</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/DELL 2.jpg" alt="Product Image"></td>
+                    <td>Dell Vostro 5320</td>
+                    <td>2500$</td>
+                    <td>Dell Vostro 5320 is so light and compact, nothing slows you down. In
+                        addition, the 12th generation Intel (r) Core
+                        processors give you the fuel you need to get the job done, while ExpressCharge can charge
+                        your
+                        device up to 80% in an
+                        hour. so that you are not tied to a socket. Look your best with the new FHD webcam equipped
+                        with
+                        Wide Dynamic Range and
+                        Noise Reduction. Sounds as clear as a phone call, with a built-in dual microphone and AI
+                        that
+                        reduces background noise.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="4"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="4"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">5</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/HP.jpeg" alt="Product Image"></td>
+                    <td>HP 155</td>
+                    <td>3000$</td>
+                    <td>HP 155 is thin, light and ready for travel. View more photos, videos, and
+                        projects on a 6.5mm micro-framed screen. You cope with
+                        the busiest days with the performance of a reliable processor. Save more than you like in
+                        ample storage
+                        space for all
+                        your photos, videos and documents. With a long battery life and fast charging technology,
+                        you can work,
+                        watch and stay
+                        connected all day. The integrated and precise touch keyboard, with multi-touch support,
+                        accelerates
+                        navigation and
+                        productivity.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="5"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="5"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+                <tr class="table-products">
+                    <th scope="row">6</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/HP 2.jpeg" alt="Product Image"></td>
+                    <td>HP 255</td>
+                    <td>3500$</td>
+                    <td>Extended productivity for the commercial sector. Offering you a high level of
+                        productivity throughout the working day,
+                        the ASUS ExpertBook P2 is a complete package dedicated to the commercial sector. This very
+                        light laptop
+                        combines
+                        robustness to military standards with a high level of corporate security, and also has the
+                        new
+                        SensePoint indicator
+                        button.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="6"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="6"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">7</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/LENOVO.jpeg" alt="Product Image">
+                    </td>
+                    <td>Lenovo V14</td>
+                    <td>4000$</td>
+                    <td>Laptop ultraportabil Laptop Lenovo V14 ADA cu procesor AMD Ryzen 3 3250U pana la
+                        3.50 GHz, 14"", Full HD, 8GB, 256GB
+                        SSD, AMD Radeon Integrated Graphics, Free DOS, Iron Grey. De la foi de calcul la apeluri
+                        video si
+                        multitasking, V14
+                        (AMD) va sustine. Alimentat de AMD, acest laptop accesibil de 14 " este conceput pentru a va
+                        mentine
+                        ocupat - si datele
+                        dvs. in siguranta. Cu fiabilitate si un design elegant cu margini subtiri, adauga o nota
+                        profesionala
+                        afacerii dvs.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="7"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="7"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">8</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/LENOVO 2.jpeg" alt="Product Image">
+                    </td>
+                    <td>Lenovo E15</td>
+                    <td>4500$</td>
+                    <td>Offering excellent day-to-day performance, the ThinkPad E15 can help promote any
+                        small business. With improved
+                        processing, memory and storage, no load is too big. The discreet graphics option and a
+                        15.6-inch FHD
+                        display, plus
+                        state-of-the-art speakers and sound, ensure you won't miss a thing. And you can enjoy more
+                        peace of mind
+                        with built-in
+                        security, reliability and accessibility.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="8"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="8"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">9</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/HUAWEI.jpeg" alt="Product Image">
+                    </td>
+                    <td>Huawei MateBook D15</td>
+                    <td>5000$</td>
+                    <td>Huawei MateBook D15 laptop with Intel® Core i3-10110U processor, 15.6 ", Full
+                        HD, 8GB, 256GB SSD, Intel® UHD Graphics
+                        620, Windows 10 Home, Silver. You get lost in the 15.6 inches of the wonderful FullSiew IPS
+                        screen. With
+                        an incredible
+                        87% screen-to-case ratio and narrow frames that have been reduced to just 5.3mm, it's
+                        perfect for
+                        watching movies, being
+                        creative or working in. HUAWEI MateBook D 15 is a master of portability, with its slim
+                        design, contoured
+                        16.9 mm thick
+                        and weighing only 1.62 kg, but do not let the ease fool you - the elegant, smooth to the
+                        touch body is
+                        strong and
+                        robust, for a versatile car you can take almost anywhere.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="9"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="9"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+                </tr>
+
+
+                <tr class="table-products">
+                    <th scope="row">10</th>
+                    <td><img class="card-img" style="width: 10em" src="./icons/HUAWEI 2.jpeg" alt="Product Image"></td>
+                    <td>Huawei MateBook D14</td>
+                    <td>5500$</td>
+                    <td>HUAWEI MateBook D 14 is equipped with a remarkable 1920 x 1080 IPS screen, and
+                        the edges have been cut to only 4.8 mm,
+                        which makes the 14-inch FullView screen look almost endless. With its viewing angle of 178
+                        °, whether
+                        you place yourself
+                        in a cinematic experience or just send an e-mail, you are immediately introduced to a visual
+                        treatment
+                        through the
+                        beautiful and vivid screen. Weighing just 1.38kg and 15.9mm thick, the simplified design not
+                        only looks
+                        great, it means
+                        you can push the hinge to almost 180 °. You will get the best view of the house, whether you
+                        go back
+                        completely or sit
+                        on the edge of the chair.</td>
+                    <td><button class="btn btn-danger delete" data-product-id="10"><i
+                                class="fa-solid fa-trash"></i></button></td>
+                    <td><button class="btn btn-info edit" data-product-id="10"><i
+                                class="fa-solid fa-pen-to-square"></i></button></td>
+           
+                </tr>
+                -->
+
+
+            </tbody>
+        </table>
+        <footer class="w-100 py-4 flex-shrink-0">
+
+            <div class="footer-details">
+                <div class="transport">
+                    <i class="fas fa-shuttle-van"></i>
+                    <h3>Free Transport</h3>
+                    <p>For orders larger than 10000€</p>
+                </div>
+                <div class="warranty">
+                    <i class="fa fa-recycle"></i>
+                    <h3>Warranty</h3>
+                    <p>All products have a warranty of up to 48 months</p>
+                </div>
+                <div class="payment">
+                    <i class="far fa-credit-card"></i>
+                    <h3>Payment</h3>
+                    <p>You can pay online with the help of a debit card</p>
+                </div>
+                <div class="support">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Support</h3>
+                    <p>We provide support and advice</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © laptop-seeking.com
+                    All rights reserved</p>
+            </div>
+
+        </footer>
+        <script type="module" src="./src/admin.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+    </div>
+</body>
+
+</html>
