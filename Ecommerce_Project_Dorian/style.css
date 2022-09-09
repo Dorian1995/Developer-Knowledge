@@ -35,7 +35,17 @@ body {
     color: #000000;
 }
 
-button {
+a.main-btn.btn-responsive {
+    color: #000000;
+    background-color: #00ffff;
+    border-color: #000000;
+}
+
+a.main-btn.btn-responsive:hover {
+    background-color: #8b008b;
+}
+
+button{
     color: #000000;
     background-color: #00ffff;
     border-color: #000000;
