@@ -1,16 +1,17 @@
 .mobile-container {
-    max-width: 480px;
+@media only screen and (min-width: 30em;)
     margin: auto;
     background-color: #555;
-    height: 500px;
+@media only screen and (height: 30em;)
     color: white;
-    border-radius: 10px;
+    border-radius: 0em;
 }
 
-.container-fluid {
-    color: white;
-    padding: 14px 16px;
+.navbar, .nav-link {
+    color: #000000;
+    padding: auto;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1em;
     display: block;
+    overflow: hidden;
 }
