@@ -117,6 +117,3 @@ if (cart.length <= 0) {
     removeTotalPrice.classList.add('hide-containers');
 
 }
-
-
-

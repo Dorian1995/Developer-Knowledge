@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
     const product = await result.json();
 
     const productCard = `
-				<div class="product-details" style="width:20em;">
+				<div class="product-details" style="width:500px;">
 				<div class="card-body">
                 <img class="card-img" src="${product.image}" alt="Product Image"/>
 	  			<h4 class="card-title">${product.name}</h4>

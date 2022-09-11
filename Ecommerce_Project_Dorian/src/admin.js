@@ -93,4 +93,3 @@ async function editproductById(productId) {
     productDescriptionEdit.value = product.description;
     productIdHiddenElement.value = product.id;
 }
-
