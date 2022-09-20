@@ -45,7 +45,7 @@ a.main-btn.btn-responsive:hover {
     background-color: #8b008b;
 }
 
-button{
+button {
     color: #000000;
     background-color: #00ffff;
     border-color: #000000;
@@ -72,9 +72,13 @@ button:hover {
 }
 
 .toggle-container {
-    color: orange;
+    color: #00ffff;
     position: relative;
     right: -1em;
+}
+
+.toggle-container:hover {
+    color: #8b008b;
 }
 
 .fa-magnifying-glass {

@@ -1,3 +1,16 @@
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}))
+
 const updateProduct = document.getElementsByClassName("update-product");
 const addNewProduct = document.getElementsByClassName("add-new-product");
 const editBtn = document.getElementsByClassName("btn-info");

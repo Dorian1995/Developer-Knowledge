@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/Dorian1995/E-commerce-Project#readme",
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.1.2",
-        "bootstrap": "^5.2.0"
+        "@fortawesome/fontawesome-free": "^6.2.0",
+        "bootstrap": "^5.2.1"
     }
 }

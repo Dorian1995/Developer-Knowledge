@@ -1,4 +1,17 @@
 /* Getting the elements by class name. */
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}))
+
 const searchBar = document.getElementsByClassName("form-control");
 const search = document.getElementsByClassName("fa-magnifying-glass");
 const productsContainer = document.getElementsByClassName("products-container");
