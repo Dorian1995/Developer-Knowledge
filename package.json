@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "all": "^0.0.0",
-    "angular": "^1.8.3",
+    "angular": "^1.6.10",
     "awesome": "^0.0.7",
     "babel": "^6.23.0",
     "bootstrap": "^5.2.1",
