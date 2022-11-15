@@ -27,6 +27,19 @@ state = {
     </span><button className="btn btn-dark btn-sm"> -
     </button></>
 
-    
+class ClassBasedComponent extends React.Component {
+    render() {
+        return <div>Class Based Component</div>;
+    }
+}
 
+const ArrowFunctionComponent = (props) => {
+    return <div>Arrow Function Component</div>;
+};
 
+function FunctionComponent(props) {
+    return <div>Function Component</div>;
+}
+
+import React, { useState } from "react";
+const [name, setName] = useState("Alin");
