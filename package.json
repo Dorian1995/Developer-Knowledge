@@ -1,18 +1,25 @@
 {
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.13",
+    "@chakra-ui/react": "^2.4.2",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "@reduxjs/toolkit": "^1.9.1",
     "angular": "^1.8.3",
     "babel": "^6.23.0",
     "bootstrap": "^5.2.3",
     "css": "^3.0.0",
+    "express": "^4.18.2",
     "html": "^1.0.0",
     "javascript": "^1.0.0",
-    "node": "^19.1.0",
+    "native": "^0.2.0",
+    "node": "^19.2.0",
     "react": "^18.2.0",
+    "react-native": "^0.70.6",
+    "redux": "^4.2.0",
     "sass": "^1.56.1",
     "scss": "^0.2.4",
-    "tailwind": "^4.0.0",
+    "tailwind": "^2.2.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
